@@ -20,7 +20,7 @@
 </div>
 
 ## 📖 1. Giới thiệu
-Học phần trang bị cho người học những kiến thức nền tảng của lập trình mạng và các kỹ năng cần thiết để thiết kế và cài đặt các ứng dụng mạng và các chuẩn ở mức ứng dụng dựa trên mô hình Client/Server, có sử dụng các giao tiếp chương trình dựa trên Sockets. Kết thúc học phần, sinh viên có thể viết các chương trình ứng dụng mạng với giao thức tầng ứng dụng tự thiết kế.
+Đề tài “Đồng hồ Server – Client (đồng bộ thời gian)” tập trung vào việc xây dựng ứng dụng mạng theo mô hình Client Server nhằm thực hiện đồng bộ thời gian giữa các máy tính. Ứng dụng được cài đặt dựa trên cơ chế giao tiếp Sockets và sử dụng giao thức UDP để truyền dữ liệu. UDP được lựa chọn nhờ ưu điểm nhẹ, nhanh, phù hợp với yêu cầu đồng bộ thời gian trong mạng. Thông qua đề tài, sinh viên không chỉ nắm vững nguyên lý truyền nhận dữ liệu bằng UDP, mà còn hiểu rõ cách thiết kế giao thức tầng ứng dụng riêng và rèn luyện kỹ năng lập trình các ứng dụng mạng thực tiễn.
 
 ## 🔧 2. Ngôn ngữ lập trình sử dụng: [![Java](https://img.shields.io/badge/Java-007396?style=for-the-badge&logo=java&logoColor=white)](https://www.java.com/)
 
