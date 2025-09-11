@@ -50,6 +50,7 @@ Xử lý dữ liệu:
 Lưu toàn bộ yêu cầu và kết quả đồng bộ từ Client vào file server_log.txt.
 
 Hỗ trợ việc kiểm chứng và đánh giá quá trình đồng bộ.
+
 2. Client
 
 Đóng vai trò là máy trạm cần đồng bộ thời gian với Server.
@@ -79,6 +80,7 @@ Synced Time (thời gian sau đồng bộ với Server).
 Offset hiển thị sai lệch so với Server.
 
 Nút Đồng bộ để thực hiện thao tác.
+
 3. Giao thức truyền thông (UDP)
 
 Cả Server và Client sử dụng DatagramSocket và DatagramPacket để gửi/nhận dữ liệu.
@@ -90,6 +92,7 @@ Tốc độ truyền nhanh hơn, độ trễ thấp.
 Không cần bắt tay (handshake) phức tạp.
 
 Giống với chuẩn NTP (Network Time Protocol) trong thực tế.
+
 4. Kết quả đạt được
 
 Ứng dụng hoạt động ổn định trong môi trường LAN.
