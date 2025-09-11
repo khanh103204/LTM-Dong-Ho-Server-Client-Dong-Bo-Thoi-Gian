@@ -34,28 +34,73 @@ Phía Client được phát triển với Java Swing, cung cấp giao diện tr�
 - **JDK:** Phiên bản 8 trở lên
 
 ## 🚀 3. Các project đã thực hiện
-Ứng dụng Đồng hồ Server – Client (đồng bộ thời gian) với các chức năng chính:
+Ứng dụng Đồng hồ Server – Client (đồng bộ thời gian) với cấu trúc và chức năng cụ thể như sau:
 
-Server:
+1. Server
 
-Quản lý và cung cấp thời gian chuẩn cho các Client.
+Giữ vai trò thời gian chuẩn trong toàn bộ hệ thống.
 
-Lưu trữ dữ liệu đồng bộ thời gian vào File/Database để phục vụ kiểm tra và đánh giá.
+Lắng nghe yêu cầu từ Client thông qua UDP socket (port 4445).
 
-Client:
+Ghi nhận các mốc thời gian T2, T3 để phản hồi cho Client.
 
-Kết nối đến Server thông qua giao thức UDP.
+Gửi gói tin phản hồi chứa thông tin cần thiết để Client tính delay và offset.
 
-Gửi yêu cầu và nhận thời gian đồng bộ từ Server.
+Xử lý dữ liệu:
 
-Hiển thị thời gian bằng giao diện Java Swing.
+Lưu toàn bộ yêu cầu và kết quả đồng bộ từ Client vào file server_log.txt.
 
-Cơ chế đồng bộ:
+Hỗ trợ việc kiểm chứng và đánh giá quá trình đồng bộ.
 
-Áp dụng giao thức UDP để trao đổi dữ liệu với tốc độ cao.
+2. Client
 
-Thực hiện mô hình đồng bộ dựa trên Client/Server, đảm bảo thời gian giữa các Client sát với thời gian chuẩn trên Server.
+Đóng vai trò là máy trạm cần đồng bộ thời gian với Server.
 
+Gửi gói tin chứa T1 (thời gian Client gửi yêu cầu) đến Server.
+
+Nhận gói phản hồi từ Server chứa T1, T2, T3.
+
+Ghi nhận T4 (thời gian nhận phản hồi).
+
+Chức năng:
+
+Tính toán delay và offset theo công thức:
+
+Delay = (T4 - T1) - (T3 - T2)
+
+Offset = ((T2 - T1) + (T3 - T4)) / 2
+
+Cập nhật đồng hồ hiển thị dựa trên thời gian cục bộ + offset.
+
+Giao diện Java Swing trực quan với:
+
+Local Time (thời gian máy Client).
+
+Synced Time (thời gian sau đồng bộ với Server).
+
+Offset hiển thị sai lệch so với Server.
+
+Nút Đồng bộ để thực hiện thao tác.
+
+3. Giao thức truyền thông (UDP)
+
+Cả Server và Client sử dụng DatagramSocket và DatagramPacket để gửi/nhận dữ liệu.
+
+Lý do chọn UDP thay vì TCP:
+
+Tốc độ truyền nhanh hơn, độ trễ thấp.
+
+Không cần bắt tay (handshake) phức tạp.
+
+Giống với chuẩn NTP (Network Time Protocol) trong thực tế.
+
+4. Kết quả đạt được
+
+Ứng dụng hoạt động ổn định trong môi trường LAN.
+
+Các Client có thể đồng bộ thời gian chính xác với Server, độ sai lệch chỉ trong vài mili-giây (phụ thuộc delay mạng).
+
+File log ghi lại đầy đủ thông tin request/response, hỗ trợ dễ dàng kiểm tra và đánh giá.
 ### [Khoá 16](./docs/projects/K16/README.md)
 
 ## 📝 4. License
