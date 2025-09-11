@@ -4,7 +4,7 @@
     </a>
 </h2>
 <h2 align="center">
-   Đề số 9. Trò chơi Oẳn Tù Tì qua mạng
+   Đồng hồ Server – Client (đồng bộ thời gian)
 </h2>
 <div align="center">
     <p align="center">
