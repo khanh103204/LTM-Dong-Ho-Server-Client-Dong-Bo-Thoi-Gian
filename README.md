@@ -59,6 +59,10 @@ Thực hiện mô hình đồng bộ dựa trên Client/Server, đảm bảo th�
 ### [Khoá 16](./docs/projects/K16/README.md)
 
 ## 📝 4. License
+Đề tài Đồng hồ Server – Client (đồng bộ thời gian) được phát triển trong khuôn khổ học phần Lập trình mạng – Khoa Công nghệ Thông tin, Đại học Đại Nam.
+
+Toàn bộ mã nguồn và tài liệu thuộc quyền sở hữu của nhóm sinh viên thực hiện và chỉ phục vụ cho mục đích học tập, nghiên cứu.
+Mọi hình thức sao chép, chỉnh sửa hoặc sử dụng cho mục đích thương mại đều cần được sự cho phép của tác giả và khoa chuyên môn
 
 © 2025 AIoTLab, Faculty of Information Technology, DaiNam University. All rights reserved.
 
