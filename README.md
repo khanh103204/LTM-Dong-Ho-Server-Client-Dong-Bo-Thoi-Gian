@@ -35,7 +35,6 @@ Phía Client được phát triển với Java Swing, cung cấp giao diện tr�
 
 ## 🚀 3. Các project đã thực hiện
 Ứng dụng Đồng hồ Server – Client (đồng bộ thời gian) với cấu trúc và chức năng cụ thể như sau:
-
 1. Server
 
 Giữ vai trò thời gian chuẩn trong toàn bộ hệ thống.
@@ -51,7 +50,6 @@ Xử lý dữ liệu:
 Lưu toàn bộ yêu cầu và kết quả đồng bộ từ Client vào file server_log.txt.
 
 Hỗ trợ việc kiểm chứng và đánh giá quá trình đồng bộ.
-
 2. Client
 
 Đóng vai trò là máy trạm cần đồng bộ thời gian với Server.
@@ -81,7 +79,6 @@ Synced Time (thời gian sau đồng bộ với Server).
 Offset hiển thị sai lệch so với Server.
 
 Nút Đồng bộ để thực hiện thao tác.
-
 3. Giao thức truyền thông (UDP)
 
 Cả Server và Client sử dụng DatagramSocket và DatagramPacket để gửi/nhận dữ liệu.
@@ -93,12 +90,18 @@ Tốc độ truyền nhanh hơn, độ trễ thấp.
 Không cần bắt tay (handshake) phức tạp.
 
 Giống với chuẩn NTP (Network Time Protocol) trong thực tế.
-
 4. Kết quả đạt được
 
 Ứng dụng hoạt động ổn định trong môi trường LAN.
 
 Các Client có thể đồng bộ thời gian chính xác với Server, độ sai lệch chỉ trong vài mili-giây (phụ thuộc delay mạng).
+
+<img width="485" height="236" alt="image" src="https://github.com/user-attachments/assets/54f625a9-51cb-4870-8a6b-cb09184212b2" />
+hình 1 giao diện đồng bộ 
+<img width="324" height="175" alt="image" src="https://github.com/user-attachments/assets/70be56c6-e42d-4b0b-875f-e97e4ad35494" />
+hình 2 đồng bộ thành công
+
+
 
 File log ghi lại đầy đủ thông tin request/response, hỗ trợ dễ dàng kiểm tra và đánh giá.
 ### [Khoá 16](./docs/projects/K16/README.md)
