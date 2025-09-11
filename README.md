@@ -97,8 +97,9 @@ Giống với chuẩn NTP (Network Time Protocol) trong thực tế.
 Các Client có thể đồng bộ thời gian chính xác với Server, độ sai lệch chỉ trong vài mili-giây (phụ thuộc delay mạng).
 
 <img width="485" height="236" alt="image" src="https://github.com/user-attachments/assets/54f625a9-51cb-4870-8a6b-cb09184212b2" />
-hình 1 giao diện đồng bộ 
 <img width="324" height="175" alt="image" src="https://github.com/user-attachments/assets/70be56c6-e42d-4b0b-875f-e97e4ad35494" />
+
+                                            Hình 1 Đồng bộ thời gian
 
 ### [Khoá 16](./docs/projects/K16/README.md)
 
