@@ -73,10 +73,26 @@ Offset = ((T2 – T1) + (T3 – T4)) / 2
 
 Cập nhật đồng hồ hiển thị dựa trên thời gian cục bộ + offset.
 
+Các hình ảnh:
 
-<img width="850" height="611" alt="image" src="https://github.com/user-attachments/assets/0fe3c70a-61fb-4c5e-b8d1-43d9d7a16963" />
+<p align = "center"> <img width="848" height="609" alt="image" src="https://github.com/user-attachments/assets/fb5348b6-067c-4827-bcb1-d95ebe91dac3"/> </p>
 
-                                    Hình 1 Giao diện đồng bộ thời gian
+<p align = "center">Hình 1: Giao diện đồng bộ thời gian </p>
+
+<p align = "center"> <img width="848" height="609" alt="image" src="https://github.com/user-attachments/assets/d46ba43b-0177-4abf-9748-22748601b335" /> </p>
+<p align = "center">Hình 2: Giao diện bấm giờ </p>
+
+<p align = "center"> <img width="848" height="609" alt="image" src="https://github.com/user-attachments/assets/10680fe9-d7b6-4f83-91f9-c28ae5401302" /> </p>
+
+<p align = "center">Hình 3: Giao diện hẹn giờ </p>
+
+<p align = "center"> <img width="848" height="609" alt="image" src="https://github.com/user-attachments/assets/7613a16c-1b0d-4348-8e33-33275fb889c3" /> </p>
+
+<p align = "center">Hình 4: Giao diện báo thức </p>
+
+
+
+
 
 
 ### [Khoá 16](./docs/projects/K16/README.md)
@@ -90,3 +106,4 @@ Mọi hình thức sao chép, chỉnh sửa hoặc sử dụng cho mục đích 
 © 2025 AIoTLab, Faculty of Information Technology, DaiNam University. All rights reserved.
 
 ---
+👥 5. Liên hệ:
