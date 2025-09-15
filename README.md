@@ -33,7 +33,7 @@ Phía Client được phát triển với Java Swing, cung cấp giao diện tr�
 - **Môi trường phát triển:** Eclipse IDE hoặc IntelliJ IDEA  
 - **JDK:** Phiên bản 8 trở lên
 
-## 🚀 3. Các project đã thực hiện
+## 🚀 3. Các chức năng chính và hình ảnh
 Ứng dụng Đồng hồ Server – Client (đồng bộ thời gian) với cấu trúc và chức năng cụ thể như sau:
 1. Server
 
