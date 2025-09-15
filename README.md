@@ -88,8 +88,6 @@ Có nút Đồng bộ và Auto Sync để thực hiện thao tác.
 Server và Client sử dụng DatagramSocket và DatagramPacket để gửi nhận dữ liệu.
 
 
-Ứng dụng chạy ổn định trong mạng LAN.
-
 Các Client đồng bộ thời gian chính xác với Server.
 
 Sai lệch thời gian chỉ trong vài mili-giây (phụ thuộc độ trễ mạng).
