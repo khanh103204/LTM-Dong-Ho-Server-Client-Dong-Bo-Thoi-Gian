@@ -35,74 +35,66 @@ Phía Client được phát triển với Java Swing, cung cấp giao diện tr�
 
 ## 🚀 3. Các chức năng chính và hình ảnh
 Ứng dụng Đồng hồ Server – Client (đồng bộ thời gian) với cấu trúc và chức năng cụ thể như sau:
-1. Server
+Server
 
-Giữ vai trò thời gian chuẩn trong toàn bộ hệ thống.
+Giữ vai trò thời gian chuẩn cho toàn hệ thống.
 
-Lắng nghe yêu cầu từ Client thông qua UDP socket (port 4445).
+Lắng nghe yêu cầu từ Client qua UDP socket (port 4445).
 
 Ghi nhận các mốc thời gian T2, T3 để phản hồi cho Client.
 
-Gửi gói tin phản hồi chứa thông tin cần thiết để Client tính delay và offset.
+Gửi gói tin phản hồi chứa T1, T2, T3 giúp Client tính toán Delay và Offset.
 
 Xử lý dữ liệu:
 
 Lưu toàn bộ yêu cầu và kết quả đồng bộ từ Client vào file server_log.txt.
 
-Hỗ trợ việc kiểm chứng và đánh giá quá trình đồng bộ.
+Hỗ trợ kiểm chứng, đánh giá quá trình đồng bộ.
 
-2. Client
+Client
 
-Đóng vai trò là máy trạm cần đồng bộ thời gian với Server.
+Đóng vai trò máy trạm cần đồng bộ thời gian với Server.
 
-Gửi gói tin chứa T1 (thời gian Client gửi yêu cầu) đến Server.
+Thực hiện:
 
-Nhận gói phản hồi từ Server chứa T1, T2, T3.
+Gửi gói tin chứa T1 (thời điểm gửi) đến Server.
 
-Ghi nhận T4 (thời gian nhận phản hồi).
+Nhận phản hồi từ Server chứa T1, T2, T3.
 
-Chức năng:
+Ghi nhận T4 (thời điểm nhận phản hồi).
 
-Tính toán delay và offset theo công thức:
+Chức năng chính:
 
-Delay = (T4 - T1) - (T3 - T2)
+Tính toán theo công thức:
 
-Offset = ((T2 - T1) + (T3 - T4)) / 2
+Delay = (T4 – T1) – (T3 – T2)
+
+Offset = ((T2 – T1) + (T3 – T4)) / 2
 
 Cập nhật đồng hồ hiển thị dựa trên thời gian cục bộ + offset.
 
-Giao diện Java Swing trực quan với:
+Giao diện Java Swing trực quan:
 
-Local Time (thời gian máy Client).
+Hiển thị Local Time (giờ máy Client).
 
-Synced Time (thời gian sau đồng bộ với Server).
+Hiển thị Synced Time (giờ đã đồng bộ với Server).
 
-Offset hiển thị sai lệch so với Server.
+Hiển thị Offset và Delay.
 
-Nút Đồng bộ để thực hiện thao tác.
+Có nút Đồng bộ và Auto Sync để thực hiện thao tác.
 
-3. Giao thức truyền thông (UDP)
+📡 Giao thức truyền thông (UDP)
 
-Cả Server và Client sử dụng DatagramSocket và DatagramPacket để gửi/nhận dữ liệu.
+Server và Client sử dụng DatagramSocket và DatagramPacket để gửi nhận dữ liệu.
 
-Lý do chọn UDP thay vì TCP:
 
-Tốc độ truyền nhanh hơn, độ trễ thấp.
+Ứng dụng chạy ổn định trong mạng LAN.
 
-Không cần bắt tay (handshake) phức tạp.
+Các Client đồng bộ thời gian chính xác với Server.
 
-Giống với chuẩn NTP (Network Time Protocol) trong thực tế.
+Sai lệch thời gian chỉ trong vài mili-giây (phụ thuộc độ trễ mạng).
 
-4. Kết quả đạt được
-
-Ứng dụng hoạt động ổn định trong môi trường LAN.
-
-Các Client có thể đồng bộ thời gian chính xác với Server, độ sai lệch chỉ trong vài mili-giây (phụ thuộc delay mạng).
-
-<img width="485" height="236" alt="image" src="https://github.com/user-attachments/assets/54f625a9-51cb-4870-8a6b-cb09184212b2" />
-<img width="324" height="175" alt="image" src="https://github.com/user-attachments/assets/70be56c6-e42d-4b0b-875f-e97e4ad35494" />
-
-                                            Hình 1 Đồng bộ thời gian
+Log của Server và Client được ghi ra file để dễ dàng kiểm chứng.
 
 ### [Khoá 16](./docs/projects/K16/README.md)
 
