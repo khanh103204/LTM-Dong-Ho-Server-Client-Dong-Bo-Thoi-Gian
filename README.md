@@ -73,26 +73,11 @@ Offset = ((T2 – T1) + (T3 – T4)) / 2
 
 Cập nhật đồng hồ hiển thị dựa trên thời gian cục bộ + offset.
 
-Giao diện Java Swing trực quan:
 
-Hiển thị Local Time (giờ máy Client).
+<img width="850" height="611" alt="image" src="https://github.com/user-attachments/assets/0fe3c70a-61fb-4c5e-b8d1-43d9d7a16963" />
 
-Hiển thị Synced Time (giờ đã đồng bộ với Server).
+                                    Hình 1 Giao diện đồng bộ thời gian
 
-Hiển thị Offset và Delay.
-
-Có nút Đồng bộ và Auto Sync để thực hiện thao tác.
-
-📡 Giao thức truyền thông (UDP)
-
-Server và Client sử dụng DatagramSocket và DatagramPacket để gửi nhận dữ liệu.
-
-
-Các Client đồng bộ thời gian chính xác với Server.
-
-Sai lệch thời gian chỉ trong vài mili-giây (phụ thuộc độ trễ mạng).
-
-Log của Server và Client được ghi ra file để dễ dàng kiểm chứng.
 
 ### [Khoá 16](./docs/projects/K16/README.md)
 
