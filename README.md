@@ -106,4 +106,4 @@ Mọi hình thức sao chép, chỉnh sửa hoặc sử dụng cho mục đích 
 © 2025 AIoTLab, Faculty of Information Technology, DaiNam University. All rights reserved.
 
 ---
-👥 5. Liên hệ:
+## 👥 5. Liên hệ
