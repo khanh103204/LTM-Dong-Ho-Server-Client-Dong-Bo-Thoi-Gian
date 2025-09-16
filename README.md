@@ -26,12 +26,26 @@
 Phía Server đóng vai trò giữ thời gian chuẩn, phản hồi các yêu cầu đồng bộ từ Client và ghi lại thông tin vào file log. 
 Phía Client được phát triển với Java Swing, cung cấp giao diện trực quan để hiển thị đồng hồ, cho phép người dùng chủ động đồng bộ với Server.
 ## 🔧 2. Ngôn ngữ lập trình sử dụng: [![Java](https://img.shields.io/badge/Java-007396?style=for-the-badge&logo=java&logoColor=white)](https://www.java.com/)
-- **Ngôn ngữ:** Java  
-- **Giao diện người dùng:** Java Swing  
-- **Giao thức mạng:** UDP (DatagramSocket, DatagramPacket)  
-- **Lưu trữ dữ liệu:** File (Server ghi log request từ Client)  
-- **Môi trường phát triển:** Eclipse IDE hoặc IntelliJ IDEA  
-- **JDK:** Phiên bản 8 trở lên
+- Hỗ trợ mạnh mẽ cho lập trình mạng (Networking API).
+
+- Tích hợp sẵn thư viện làm việc với Socket, Thread, I/O.
+
+- Đa nền tảng (cross-platform), dễ triển khai trên nhiều hệ điều hành.
+## Công nghệ sử dụng:
+- [![TCP](https://img.shields.io/badge/TCP%20Socket-006400?style=flat-square&logo=socket.io&logoColor=white)]()  
+  - Được sử dụng để tạo kết nối giữa Client – Server.  
+  - Đảm bảo tính tin cậy, có thứ tự và không mất gói tin trong quá trình truyền dữ liệu.  
+  - Phù hợp cho các ứng dụng cần trao đổi dữ liệu chính xác theo thời gian thực, ví dụ trò chơi hoặc chat.  
+- [![Client/Server](https://img.shields.io/badge/Client%2FServer-4682B4?style=flat-square&logo=serverless&logoColor=white)]()  
+  - **Server**: quản lý kết nối từ nhiều client, điều phối lượt chơi, xử lý logic so sánh kết quả, và trả phản hồi.  
+  - **Client**: kết nối tới server, gửi lựa chọn (Kéo – Búa – Bao), và nhận kết quả.  
+- [![Multithreading](https://img.shields.io/badge/Multithreading-8B0000?style=flat-square&logo=apache%20kafka&logoColor=white)]()  
+  - Server sử dụng Thread để quản lý nhiều client cùng lúc.  
+  - Đảm bảo tính song song, tránh hiện tượng “nghẽn” khi nhiều người chơi kết nối.  
+- [![Java I/O](https://img.shields.io/badge/Java%20I%2FO-FF8C00?style=flat-square&logo=openjdk&logoColor=white)]()  
+  - Dùng để truyền dữ liệu (chuỗi ký tự, thông điệp, lựa chọn của người chơi) giữa client và server.  
+- [![IDE](https://img.shields.io/badge/Eclipse%20%2F%20IntelliJ%20IDEA%20%2F%20NetBeans-800080?style=flat-square&logo=eclipseide&logoColor=white)]()  
+  - IDE hỗ trợ phát triển: viết, biên dịch và debug chương trình Java.
 
 ## 🚀 3. Các chức năng chính và hình ảnh
 Ứng dụng Đồng hồ Server – Client (đồng bộ thời gian) với cấu trúc và chức năng cụ thể như sau:
