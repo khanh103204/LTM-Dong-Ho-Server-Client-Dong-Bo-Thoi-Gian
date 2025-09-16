@@ -35,65 +35,133 @@ Phía Client được phát triển với Java Swing, cung cấp giao diện tr�
 
 ## 🚀 3. Các chức năng chính và hình ảnh
 Ứng dụng Đồng hồ Server – Client (đồng bộ thời gian) với cấu trúc và chức năng cụ thể như sau:
-Server
 
-Giữ vai trò thời gian chuẩn cho toàn hệ thống.
+Server:
 
-Lắng nghe yêu cầu từ Client qua UDP socket (port 4445).
+Nguồn thời gian chuẩn của hệ thống.
 
-Ghi nhận các mốc thời gian T2, T3 để phản hồi cho Client.
+Chức năng:
 
-Gửi gói tin phản hồi chứa T1, T2, T3 giúp Client tính toán Delay và Offset.
+Lắng nghe yêu cầu từ Client qua UDP (port 4445).
 
-Xử lý dữ liệu:
+Trả về thời gian theo múi giờ yêu cầu (UTC, VN, US, JP).
 
-Lưu toàn bộ yêu cầu và kết quả đồng bộ từ Client vào file server_log.txt.
+Ghi log vào server_log.txt.
 
-Hỗ trợ kiểm chứng, đánh giá quá trình đồng bộ.
+Client:
 
-Client
+Máy trạm cần đồng bộ với Server.
 
-Đóng vai trò máy trạm cần đồng bộ thời gian với Server.
+Chức năng:
 
-Thực hiện:
+Hiển thị giờ cục bộ và giờ sau đồng bộ.
 
-Gửi gói tin chứa T1 (thời điểm gửi) đến Server.
+Chọn múi giờ (UTC, VN, US, JP) qua ComboBox.
 
-Nhận phản hồi từ Server chứa T1, T2, T3.
+Nút Đồng bộ gửi yêu cầu, nhận phản hồi và cập nhật.
 
-Ghi nhận T4 (thời điểm nhận phản hồi).
-
-Chức năng chính:
-
-Tính toán theo công thức:
-
-Delay = (T4 – T1) – (T3 – T2)
-
-Offset = ((T2 – T1) + (T3 – T4)) / 2
-
-Cập nhật đồng hồ hiển thị dựa trên thời gian cục bộ + offset.
+Tính toán và hiển thị độ trễ (Delay).
 
 Các hình ảnh:
 
-<p align = "center"> <img width="848" height="609" alt="image" src="https://github.com/user-attachments/assets/fb5348b6-067c-4827-bcb1-d95ebe91dac3"/> </p>
+<p align = "center"> <img width="848" height="609" alt="image" src="https://github.com/user-attachments/assets/82aced08-424f-4cd8-9362-aedeea614df3" />
+ </p>
 
-<p align = "center">Hình 1: Giao diện đồng bộ thời gian </p>
+<p align = "center">Hình 1: Giao diện thời gian server </p>
 
-<p align = "center"> <img width="848" height="609" alt="image" src="https://github.com/user-attachments/assets/d46ba43b-0177-4abf-9748-22748601b335" /> </p>
-<p align = "center">Hình 2: Giao diện bấm giờ </p>
+<p align = "center"> <img width="848" height="609" alt="image" src="https://github.com/user-attachments/assets/206ec908-e334-448a-bb90-38ab2c1e0daa" />
+ </p>
+<p align = "center">Hình 2: Giao diện thời gian client </p>
 
-<p align = "center"> <img width="848" height="609" alt="image" src="https://github.com/user-attachments/assets/10680fe9-d7b6-4f83-91f9-c28ae5401302" /> </p>
+<p align = "center"> <img width="848" height="609" alt="image" src="https://github.com/user-attachments/assets/ed6cd34e-2504-40d8-8477-8d6a1987a454" />
+ </p>
 
-<p align = "center">Hình 3: Giao diện hẹn giờ </p>
+<p align = "center">Hình 3: Giao diện chọn múi giờ </p>
 
-<p align = "center"> <img width="848" height="609" alt="image" src="https://github.com/user-attachments/assets/7613a16c-1b0d-4348-8e33-33275fb889c3" /> </p>
+<p align = "center"> <img width="848" height="609" alt="image" src="https://github.com/user-attachments/assets/224a6a77-5d3c-403c-8857-80984eecee72" />
+ </p>
 
-<p align = "center">Hình 4: Giao diện báo thức </p>
+<p align = "center">Hình 4: Gia diện đồng bộ múi giờ đã chọn </p>
 
 
 
 
 
 ## 📝 4. Các bước cài đặt
+
+Bước 1: Chuẩn bị môi trường
+
+Cài đặt Java JDK 8 hoặc mới hơn.
+
+Tải tại: https://www.oracle.com/java/technologies/downloads/
+
+Sau khi cài đặt, mở Command Prompt / Terminal và kiểm tra:
+
+java -version
+
+
+Nếu hiển thị java version "1.8.x" hoặc cao hơn nghĩa là cài đặt thành công.
+
+Cài đặt một IDE để chạy code dễ dàng (khuyến nghị IntelliJ IDEA, có thể dùng Eclipse hoặc NetBeans).
+
+Bước 2: Tải mã nguồn
+
+Clone dự án từ GitHub:
+
+git clone [https://github.com/your-repo/ClockSync-App.git
+cd ClockSync-App](https://github.com/khanh103204/LTM-Dong-Ho-Server-Client-Dong-Bo-Thoi-Gian.git)
+
+
+Nếu không dùng Git, bạn có thể bấm Download ZIP trên GitHub → giải nén.
+
+Bước 3: Mở dự án trong IDE
+
+Vào File → Open Project trong IDE.
+
+Chọn thư mục chứa source code (Client.java và Server.java).
+
+Đảm bảo IDE nhận diện dự án là Java Project.
+
+Bước 4: Biên dịch và chạy Server
+
+Mở file Server.java.
+
+Nhấn Run để chạy server.
+
+Server sẽ lắng nghe kết nối trên port 4445.
+
+Nếu chạy thành công, IDE sẽ hiển thị log kiểu:
+
+[Server] Đang chạy tại cổng 4445...
+Chờ yêu cầu từ Client...
+
+
+Bước 5: Biên dịch và chạy Client
+
+Mở file Client.java.
+
+Nhấn Run để chạy client.
+
+Giao diện hiển thị:
+
+Ngày tháng năm.
+
+Đồng hồ Việt Nam chạy mặc định.
+
+ComboBox chọn múi giờ (UTC, Việt Nam, Mỹ, Nhật).
+
+Nút Đồng bộ giờ.
+
+Bước 6: Đồng bộ thời gian
+
+Người dùng chọn múi giờ từ ComboBox (ví dụ: UTC).
+
+Nhấn Đồng bộ giờ.
+
+Client gửi yêu cầu đến Server → Server trả về thời gian chuẩn theo múi giờ đã chọn.
+
+Client cập nhật và hiển thị đồng hồ theo múi giờ đó.
+
+Log đồng bộ sẽ được lưu tại file server_log.txt trên Server để kiểm tra sau.
 
 ## 👥 5. Liên hệ
