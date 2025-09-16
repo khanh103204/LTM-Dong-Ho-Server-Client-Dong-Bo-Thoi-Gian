@@ -89,7 +89,7 @@ Các hình ảnh:
 
 ## 📝 4. Các bước cài đặt
 
-Bước 1: Chuẩn bị môi trường
+🔹Bước 1: Chuẩn bị môi trường
 
 Cài đặt Java JDK 8 hoặc mới hơn.
 
@@ -104,7 +104,7 @@ Nếu hiển thị java version "1.8.x" hoặc cao hơn nghĩa là cài đặt t
 
 Cài đặt một IDE để chạy code dễ dàng (khuyến nghị IntelliJ IDEA, có thể dùng Eclipse hoặc NetBeans).
 
-Bước 2: Tải mã nguồn
+🔹Bước 2: Tải mã nguồn
 
 Clone dự án từ GitHub:
 
@@ -114,7 +114,7 @@ cd ClockSync-App](https://github.com/khanh103204/LTM-Dong-Ho-Server-Client-Dong-
 
 Nếu không dùng Git, bạn có thể bấm Download ZIP trên GitHub → giải nén.
 
-Bước 3: Mở dự án trong IDE
+🔹Bước 3: Mở dự án trong IDE
 
 Vào File → Open Project trong IDE.
 
@@ -122,7 +122,7 @@ Chọn thư mục chứa source code (Client.java và Server.java).
 
 Đảm bảo IDE nhận diện dự án là Java Project.
 
-Bước 4: Biên dịch và chạy Server
+🔹Bước 4: Biên dịch và chạy Server
 
 Mở file Server.java.
 
@@ -136,7 +136,7 @@ Nếu chạy thành công, IDE sẽ hiển thị log kiểu:
 Chờ yêu cầu từ Client...
 
 
-Bước 5: Biên dịch và chạy Client
+🔹Bước 5: Biên dịch và chạy Client
 
 Mở file Client.java.
 
@@ -152,7 +152,7 @@ ComboBox chọn múi giờ (UTC, Việt Nam, Mỹ, Nhật).
 
 Nút Đồng bộ giờ.
 
-Bước 6: Đồng bộ thời gian
+🔹Bước 6: Đồng bộ thời gian
 
 Người dùng chọn múi giờ từ ComboBox (ví dụ: UTC).
 
