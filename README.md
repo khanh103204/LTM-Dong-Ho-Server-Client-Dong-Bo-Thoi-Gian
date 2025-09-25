@@ -190,7 +190,6 @@ Log đồng bộ sẽ được lưu tại file server_log.txt trên Server để
 📞 Số điện thoại: 0862058018
 
 
-💻 Mã nguồn dự án: [github.com/your-repo](https://github.com/khanh103204/LTM-Dong-Ho-Server-Client-Dong-Bo-Thoi-Gian.git)
 
 
 © 2025 AIoTLab, Faculty of Information Technology, DaiNam University. All rights reserved.
