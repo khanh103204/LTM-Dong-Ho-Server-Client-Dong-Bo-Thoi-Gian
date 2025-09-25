@@ -182,6 +182,8 @@ Log đồng bộ sẽ được lưu tại file server_log.txt trên Server để
 
 👤 Người thực hiện: Đặng Văn Khánh
 
+🏫 Lớp CNTT 16-03 
+
 ✉️ Liên hệ qua email: khanh.lehends@gmail.com
 
 
